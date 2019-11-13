@@ -1,7 +1,6 @@
 $(function() {
 	var initUrl = '/d2d/shopadmin/getshopinitinfo';
 	var registShopUrl = '/d2d/shopadmin/registershop';
-	alert(initUrl);
 	getShopInitInfo();
 	function getShopInitInfo() {
 		$.getJSON(initUrl, function(data) {
@@ -24,19 +23,29 @@ $(function() {
 			var shop = {};
 			shop.shopName = $('#shop-name').val();
 			shop.shopAddr = $('#shop-addr').val();
-			shop.phone = $('#shop-addr').val();
+			shop.phone = $('#shop-phone').val();
+			shop.shopDesc = $('#shop-desc').val();
 			$("#shop-category").val();
-			var shopCategoryOptions=$("#shop-category option:selected");
-			shop.shopCategory=shopCategoryOptions.val();
+			var shopCategoryOptions=$("#shop-category option:selected").attr("data-id");
+			shop.shopCategory={shopCategoryId:shopCategoryOptions}
 			$("#area").val();
-			var areaOptions=$("#area option:selected");
-			shop.area=areaOptions.val();
+			var areaOptions=$("#area option:selected").attr("data-id");
+			shop.area={areaId : areaOptions};
 			var shopImg = $('#shop-img')[0].files[0];
 			var formData = new FormData();
 			formData.append('shopImg',shopImg);
 			formData.append('shopStr',JSON.stringify(shop));
+			var verifyCodeActual=$('#j_captcha').val();
+		
+			//如果为空
+			if(!verifyCodeActual){
+				$.toast(verifyCodeActual);
+				$.toast('请输入验证码!');
+				return;
+			}
+			formData.append('verifyCodeActual',verifyCodeActual);
 			$.ajax({
-				url: registerShopUrl,
+				url: registShopUrl,
 				type:'POST',
 				data:formData,
 				contentType:false,
@@ -49,6 +58,7 @@ $(function() {
 					}else{
 						$.toast('提交失败！'+data.errMsg);
 					}
+					$('#captcha_img').click();
 				}
 			})
 		});

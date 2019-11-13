@@ -2,7 +2,9 @@ package com.sandu.web.shopadmin;
 
 import java.io.File;
 import java.io.IOException;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 
 import javax.servlet.http.HttpServletRequest;
@@ -18,10 +20,15 @@ import org.springframework.web.multipart.commons.CommonsMultipartResolver;
 
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.sandu.dto.ShopExecution;
+import com.sandu.entity2.TbArea;
 import com.sandu.entity2.TbPersonInfo;
 import com.sandu.entity2.TbShop;
+import com.sandu.entity2.TbShopCategory;
 import com.sandu.enums.ShopStateEnum;
+import com.sandu.service.AreaService;
+import com.sandu.service.ShopCategoryService;
 import com.sandu.service.ShopService;
+import com.sandu.util.CodeUtil;
 import com.sandu.util.HttpServletRequestUtil;
 import com.sandu.util.ImageUtil;
 import com.sandu.util.PathUtil;
@@ -31,11 +38,40 @@ import com.sandu.util.PathUtil;
 public class ShopManagementController {
 	@Autowired
 	private ShopService shopService;
+	@Autowired
+	private AreaService areaService;
+	@Autowired
+	private ShopCategoryService shopCategoryService;
+
+	@RequestMapping(value = "/getshopinitinfo", method = RequestMethod.GET)
+	@ResponseBody
+	private Map<String, Object> getShopInitInfo() {
+		Map<String, Object> modelMap = new HashMap<String, Object>();
+		List<TbShopCategory> shopCategoryList = new ArrayList<TbShopCategory>();
+		List<TbArea> areaList = new ArrayList<TbArea>();
+
+		try {
+			shopCategoryList = shopCategoryService.getShopCateogoryList(new TbShopCategory());
+			areaList = areaService.getAreaList();
+			modelMap.put("shopCategoryList", shopCategoryList);
+			modelMap.put("areaList", areaList);
+			modelMap.put("success", true);
+		} catch (Exception e) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", e.getMessage());
+		}
+		return modelMap;
+	}
 
 	@RequestMapping(value = "/registershop", method = RequestMethod.POST)
 	@ResponseBody
 	private Map<String, Object> registerShop(HttpServletRequest request) {
 		Map<String, Object> modelMap = new HashMap<String, Object>();
+		if (!CodeUtil.checkVerifyCode(request)) {
+			modelMap.put("success", false);
+			modelMap.put("errMsg", "输入了错误的验证码");
+			return modelMap;
+		}
 		// 1.接收并转化相应的参数，包括店铺信息以及图片信息
 		String shopStr = HttpServletRequestUtil.getString(request, "shopStr");
 		ObjectMapper mapper = new ObjectMapper();
@@ -67,6 +103,7 @@ public class ShopManagementController {
 			File shopImgFile = new File(
 					PathUtil.getImgBasePath() + ImageUtil.getRandomNumb(5) + shopImg.getOriginalFilename());
 			try {
+				//将CommonsMultipartFile转成file去处理
 				shopImg.transferTo(shopImgFile);
 			} catch (IllegalStateException e) {
 				modelMap.put("success", false);

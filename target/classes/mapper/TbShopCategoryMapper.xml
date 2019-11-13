@@ -1,50 +1,104 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <mapper namespace="com.sandu.dao.TbShopCategoryDao">
-  <resultMap id="BaseResultMap" type="com.sandu.entity2.TbShopCategory">
-    <id column="shop_category_id" jdbcType="INTEGER" property="shopCategoryId" />
-    <result column="shop_category_name" jdbcType="VARCHAR" property="shopCategoryName" />
-    <result column="shop_category_desc" jdbcType="VARCHAR" property="shopCategoryDesc" />
-    <result column="shop_category_img" jdbcType="VARCHAR" property="shopCategoryImg" />
-    <result column="priority" jdbcType="INTEGER" property="priority" />
-    <result column="create_time" jdbcType="TIMESTAMP" property="createTime" />
-    <result column="last_edit_time" jdbcType="TIMESTAMP" property="lastEditTime" />
-    <result column="parent_id" jdbcType="INTEGER" property="parentId" />
-  </resultMap>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
-    delete from tb_shop_category
-    where shop_category_id = #{shopCategoryId,jdbcType=INTEGER}
-  </delete>
-  <insert id="insert" parameterType="com.sandu.entity2.TbShopCategory">
-    insert into tb_shop_category (shop_category_id, shop_category_name, 
-      shop_category_desc, shop_category_img, priority, 
-      create_time, last_edit_time, parent_id
-      )
-    values (#{shopCategoryId,jdbcType=INTEGER}, #{shopCategoryName,jdbcType=VARCHAR}, 
-      #{shopCategoryDesc,jdbcType=VARCHAR}, #{shopCategoryImg,jdbcType=VARCHAR}, #{priority,jdbcType=INTEGER}, 
-      #{createTime,jdbcType=TIMESTAMP}, #{lastEditTime,jdbcType=TIMESTAMP}, #{parentId,jdbcType=INTEGER}
-      )
-  </insert>
-  <update id="updateByPrimaryKey" parameterType="com.sandu.entity2.TbShopCategory">
-    update tb_shop_category
-    set shop_category_name = #{shopCategoryName,jdbcType=VARCHAR},
-      shop_category_desc = #{shopCategoryDesc,jdbcType=VARCHAR},
-      shop_category_img = #{shopCategoryImg,jdbcType=VARCHAR},
-      priority = #{priority,jdbcType=INTEGER},
-      create_time = #{createTime,jdbcType=TIMESTAMP},
-      last_edit_time = #{lastEditTime,jdbcType=TIMESTAMP},
-      parent_id = #{parentId,jdbcType=INTEGER}
-    where shop_category_id = #{shopCategoryId,jdbcType=INTEGER}
-  </update>
-  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
-    select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, 
-    priority, create_time, last_edit_time, parent_id
-    from tb_shop_category
-    where shop_category_id = #{shopCategoryId,jdbcType=INTEGER}
-  </select>
-  <select id="selectAll" resultMap="BaseResultMap">
-    select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, 
-    priority, create_time, last_edit_time, parent_id
-    from tb_shop_category
-  </select>
+	<resultMap id="BaseResultMap"
+		type="com.sandu.entity2.TbShopCategory">
+		<id column="shop_category_id" jdbcType="INTEGER"
+			property="shopCategoryId" />
+		<result column="shop_category_name" jdbcType="VARCHAR"
+			property="shopCategoryName" />
+		<result column="shop_category_desc" jdbcType="VARCHAR"
+			property="shopCategoryDesc" />
+		<result column="shop_category_img" jdbcType="VARCHAR"
+			property="shopCategoryImg" />
+		<result column="priority" jdbcType="INTEGER"
+			property="priority" />
+		<result column="create_time" jdbcType="TIMESTAMP"
+			property="createTime" />
+		<result column="last_edit_time" jdbcType="TIMESTAMP"
+			property="lastEditTime" />
+		<result column="parent_id" jdbcType="INTEGER"
+			property="parentId" />
+	</resultMap>
+	<delete id="deleteByPrimaryKey"
+		parameterType="java.lang.Integer">
+		delete from tb_shop_category
+		where shop_category_id =
+		#{shopCategoryId,jdbcType=INTEGER}
+	</delete>
+	<insert id="insert"
+		parameterType="com.sandu.entity2.TbShopCategory">
+		insert into tb_shop_category (shop_category_id,
+		shop_category_name,
+		shop_category_desc, shop_category_img, priority,
+		create_time, last_edit_time, parent_id
+		)
+		values
+		(#{shopCategoryId,jdbcType=INTEGER},
+		#{shopCategoryName,jdbcType=VARCHAR},
+		#{shopCategoryDesc,jdbcType=VARCHAR},
+		#{shopCategoryImg,jdbcType=VARCHAR}, #{priority,jdbcType=INTEGER},
+		#{createTime,jdbcType=TIMESTAMP}, #{lastEditTime,jdbcType=TIMESTAMP},
+		#{parentId,jdbcType=INTEGER}
+		)
+	</insert>
+	<update id="updateByPrimaryKey"
+		parameterType="com.sandu.entity2.TbShopCategory">
+		update tb_shop_category
+		set shop_category_name =
+		#{shopCategoryName,jdbcType=VARCHAR},
+		shop_category_desc =
+		#{shopCategoryDesc,jdbcType=VARCHAR},
+		shop_category_img =
+		#{shopCategoryImg,jdbcType=VARCHAR},
+		priority =
+		#{priority,jdbcType=INTEGER},
+		create_time =
+		#{createTime,jdbcType=TIMESTAMP},
+		last_edit_time =
+		#{lastEditTime,jdbcType=TIMESTAMP},
+		parent_id =
+		#{parentId,jdbcType=INTEGER}
+		where shop_category_id =
+		#{shopCategoryId,jdbcType=INTEGER}
+	</update>
+	<select id="selectByPrimaryKey"
+		parameterType="java.lang.Integer" resultMap="BaseResultMap">
+		select shop_category_id,
+		shop_category_name, shop_category_desc,
+		shop_category_img,
+		priority,
+		create_time, last_edit_time, parent_id
+		from tb_shop_category
+		where
+		shop_category_id = #{shopCategoryId,jdbcType=INTEGER}
+	</select>
+	<select id="selectAll" resultMap="BaseResultMap">
+		select shop_category_id,
+		shop_category_name, shop_category_desc,
+		shop_category_img,
+		priority,
+		create_time, last_edit_time, parent_id
+		from tb_shop_category
+	</select>
+	<select id="queryShopCategory"
+		resultType="com.sandu.entity2.TbShopCategory">
+		select shop_category_id, shop_category_name, shop_category_desc,
+		shop_category_img,
+		priority, create_time, last_edit_time, parent_id
+		from
+		tb_shop_category
+		<where>
+			<if test="shopCategoryCondition!=null">
+				and parent_id is not null
+			</if>
+			<if test="shopCategoryCondition.parent!=null">
+				and parent_id =
+				#{shopCategoryCondition.parent.shopCategoryId}
+			</if>
+		</where>
+		ORDER BY
+		priority DESC
+	</select>
+
 </mapper>

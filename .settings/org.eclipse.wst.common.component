@@ -6,7 +6,6 @@
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources/mapper"/>
         <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources/spring"/>
-        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/test/resources"/>
         <property name="context-root" value="d2d"/>
         <property name="java-output-path" value="/d2d/target/classes"/>
     </wb-module>

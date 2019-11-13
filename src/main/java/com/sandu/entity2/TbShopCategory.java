@@ -84,4 +84,13 @@ public class TbShopCategory {
         this.lastEditTime = lastEditTime;
     }
 
+	@Override
+	public String toString() {
+		return "TbShopCategory [shopCategoryId=" + shopCategoryId + ", shopCategoryName=" + shopCategoryName
+				+ ", shopCategoryDesc=" + shopCategoryDesc + ", shopCategoryImg=" + shopCategoryImg + ", priority="
+				+ priority + ", createTime=" + createTime + ", lastEditTime=" + lastEditTime + ", parent=" + parent
+				+ "]";
+	}
+
+    
 }

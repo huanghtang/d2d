@@ -1,7 +1,9 @@
 package com.sandu.dao;
 
 import com.sandu.entity2.TbProductCategory;
+
 import java.util.List;
+
 
 public interface TbProductCategoryDao {
     int deleteByPrimaryKey(Integer productCategoryId);
@@ -13,4 +15,6 @@ public interface TbProductCategoryDao {
     List<TbProductCategory> selectAll();
 
     int updateByPrimaryKey(TbProductCategory record);
+
+
 }
