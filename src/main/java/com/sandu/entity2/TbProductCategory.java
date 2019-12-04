@@ -52,4 +52,13 @@ public class TbProductCategory {
     public void setShopId(Integer shopId) {
         this.shopId = shopId;
     }
+
+	@Override
+	public String toString() {
+		return "TbProductCategory [productCategoryId=" + productCategoryId + ", productCategoryName="
+				+ productCategoryName + ", priority=" + priority + ", createTime=" + createTime + ", shopId=" + shopId
+				+ "]";
+	}
+    
+    
 }

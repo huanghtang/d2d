@@ -42,7 +42,14 @@ public class ShopDaoTest extends BaseTest {
 		int effeNum = shopDao.insert(shop);
 		System.out.println(effeNum);
 	}
+	@Ignore
+	@Test
+	public void testQueryShop() {
+		TbShop s = shopDao.queryByShopId(1);
+		System.out.println(s);
+	}
 
+	@Ignore
 	@Test
 	public void testUpdateShop() {
 		TbShop shop = new TbShop();
@@ -53,7 +60,7 @@ public class ShopDaoTest extends BaseTest {
 		area.setAreaId(20);
 		shopCategory.setShopCategoryId(1);
 		shop.setAdvice("bbbbbbb");
-		//shop.setArea(area);
+		// shop.setArea(area);
 		shop.setOwner(owner);
 		shop.setShopCategory(shopCategory);
 		shop.setShopDesc("uuuu");
@@ -75,5 +82,22 @@ public class ShopDaoTest extends BaseTest {
 		for (TbShop tbShop : list) {
 			System.out.println(tbShop);
 		}
+	}
+	
+	@Test
+	public void testQueryShopList() {
+		TbShop shopCondition = new TbShop();
+		TbPersonInfo owner = new TbPersonInfo();
+		TbShopCategory sc = new TbShopCategory();
+		sc.setShopCategoryId(1);
+		
+		owner.setUserId(1);
+		shopCondition.setOwner(owner);
+		shopCondition.setShopCategory(sc);
+		List<TbShop> shopList=shopDao.queryShopList(shopCondition, 0, 5);
+		for (TbShop tbShop : shopList) {
+			System.out.println(tbShop);
+		}
+		System.out.println(shopDao.queryShopCount(shopCondition));
 	}
 }

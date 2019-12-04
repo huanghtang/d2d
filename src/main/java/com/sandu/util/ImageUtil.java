@@ -68,10 +68,43 @@ public class ImageUtil {
 		}
 		return relativeAddr;
 	}
+	
+	/**
+	 * 处理详情图，并返回新生成图片的相对值路径
+	 * @param thumbnail
+	 * @param targetAddr
+	 * @return
+	 */
+	public static String generrateNormalImg(File thumbnail,String targetAddr) {
+		String realFileName=getRandomFileName();
+		String extension=getExtension(thumbnail);
+		makeDirPath(targetAddr);
+		String relativeAddr=targetAddr+realFileName+extension;
+		logger.debug("relativeAddr:"+relativeAddr);
+		File dest = new File(PathUtil.getImgBasePath()+relativeAddr);
+		logger.debug("complete addr:"+PathUtil.getImgBasePath()+relativeAddr);
+		try {
+			Thumbnails.of(thumbnail).size(337, 640)
+			.watermark(Positions.BOTTOM_LEFT, ImageIO.read(new File(basePath + "shuiyin.png")), 1f)
+			.outputQuality(0.9f).toFile(dest);
+		} catch (Exception e) {
+			// TODO: handle exception
+			logger.error(e.getMessage());
+			e.printStackTrace();
+			
+		}
+		return relativeAddr;
+	}
 
-	private static String getExtension(File cFile) {
+	public static String getExtension(File cFile) {
 		int pointAddr=cFile.getName().lastIndexOf(".");
 		String fileName=cFile.getName().substring(pointAddr);
+		return fileName;
+	}
+	
+	public static String getStringExtension(String cFile) {
+		int pointAddr=cFile.lastIndexOf(".");
+		String fileName=cFile.substring(pointAddr);
 		return fileName;
 	}
 
@@ -100,6 +133,28 @@ public class ImageUtil {
 	    return sb.toString();   
 	 }   
 	
+	/**
+	 * storePath是文件的路径还是目录的路径，
+	 * 如果storePath是文件路径则删除该文件
+	 * 如果storeOath是目录路径则删除该目录下的所有文件
+	 * @param storePath
+	 */
+	public static void deleteFileOrPath(String storePath) {
+		File fileOrPath=new File(PathUtil.getImgBasePath()+storePath);
+		System.out.println(PathUtil.getImgBasePath()+storePath);
+		if(fileOrPath.exists()) {
+			System.out.println(true);
+			if(fileOrPath.isDirectory()) {
+				File[] files=fileOrPath.listFiles();
+				for(int i =0;i<files.length;i++) {
+					files[i].delete();
+				}
+			}
+			System.out.println(fileOrPath.delete());
+		}
+	}
+	
+	
 	public static void main(String[] args) throws IOException {
 	//	String basePath = Thread.currentThread().getContextClassLoader().getResource("").getPath();
 		/*Thumbnails.of(new File("C:\\Users\\sandu\\Desktop\\星空.jpg")).size(200, 200)
@@ -107,12 +162,12 @@ public class ImageUtil {
 				.outputQuality(0.8f).toFile("C:/Users/sandu/Desktop/upload/xingkong.png");*/
 		//long startTime=System.currentTimeMillis();
 		//System.out.println(getRandomFileName());
-		
+		deleteFileOrPath("\\upload\\item\\shop\\56");
 		//System.out.println(getExtension());
-		File f = new File(basePath + "shuiyin.png");
-		Desktop.getDesktop().open(f);
+		//File f = new File(basePath + "shuiyin.png");
+		//Desktop.getDesktop().open(f);
 		//long endTime=System.currentTimeMillis();
 		//System.out.println(endTime-startTime);
-	
+		
 	}
 }

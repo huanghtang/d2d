@@ -1,41 +1,45 @@
-2019-11-12 10:11:39.886 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category ORDER BY priority DESC 
-2019-11-12 10:11:39.985 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 
-2019-11-12 10:17:52.113 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category ORDER BY priority DESC 
-2019-11-12 10:17:52.191 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 
-2019-11-12 10:17:52.215 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 5
-2019-11-12 10:20:40.084 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category ORDER BY priority DESC 
-2019-11-12 10:20:40.143 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 
-2019-11-12 10:20:40.176 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 5
-2019-11-12 10:25:00.523 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:25:00.569 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: null
-2019-11-12 10:25:00.585 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 0
-2019-11-12 10:28:58.581 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:28:58.658 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: null
-2019-11-12 10:28:58.675 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 0
-2019-11-12 10:35:39.866 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:35:39.923 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: null
-2019-11-12 10:35:39.968 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 0
-2019-11-12 10:36:18.120 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:36:18.201 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 1(Integer)
-2019-11-12 10:36:18.222 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 1
-2019-11-12 10:37:31.851 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:37:31.919 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 1(Integer)
-2019-11-12 10:37:31.954 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 1
-2019-11-12 10:38:26.256 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:38:26.319 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 1(Integer)
-2019-11-12 10:38:26.344 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 1
-2019-11-12 10:39:40.590 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id = ? ORDER BY priority DESC 
-2019-11-12 10:39:40.649 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 1(Integer)
-2019-11-12 10:39:40.679 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 1
-2019-11-12 11:28:35.861 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id is not null and parent_id = ? ORDER BY priority DESC 
-2019-11-12 11:28:35.922 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 1(Integer)
-2019-11-12 11:28:35.968 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 1
-2019-11-12 11:29:05.265 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id is not null and parent_id = ? ORDER BY priority DESC 
-2019-11-12 11:29:05.322 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: null
-2019-11-12 11:29:05.347 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 0
-2019-11-12 11:29:31.018 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id is not null and parent_id = ? ORDER BY priority DESC 
-2019-11-12 11:29:31.091 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: null
-2019-11-12 11:29:31.113 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 0
-2019-11-12 11:30:02.542 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==>  Preparing: select shop_category_id, shop_category_name, shop_category_desc, shop_category_img, priority, create_time, last_edit_time, parent_id from tb_shop_category WHERE parent_id is not null ORDER BY priority DESC 
-2019-11-12 11:30:02.606 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-==> Parameters: 
-2019-11-12 11:30:02.631 [main]DEBUG com.sandu.dao.TbShopCategoryDao.queryShopCategory-<==      Total: 2
+2019-11-28 16:13:05.884 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==>  Preparing: select product_Id, product_name, product_category_id, shop_id, product_desc, img_addr, normal_price, promotion_price, create_time, last_edit_time, priority, enable_status from tb_product 
+2019-11-28 16:13:05.999 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==> Parameters: 
+2019-11-28 16:13:06.359 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-<==      Total: 21
+2019-11-28 16:13:40.083 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==>  Preparing: select product_Id, product_name, product_category_id, shop_id, product_desc, img_addr, normal_price, promotion_price, create_time, last_edit_time, priority, enable_status from tb_product 
+2019-11-28 16:13:40.160 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==> Parameters: 
+2019-11-28 16:13:40.178 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-<==      Total: 21
+2019-11-28 16:14:12.916 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==>  Preparing: select product_Id, product_name, product_category_id, shop_id, product_desc, img_addr, normal_price, promotion_price, create_time, last_edit_time, priority, enable_status from tb_product 
+2019-11-28 16:14:12.995 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==> Parameters: 
+2019-11-28 16:14:13.018 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-<==      Total: 21
+2019-11-28 16:15:07.601 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==>  Preparing: select product_Id, product_name, product_category_id, shop_id, product_desc, img_addr, normal_price, promotion_price, create_time, last_edit_time, priority, enable_status from tb_product 
+2019-11-28 16:15:07.706 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-==> Parameters: 
+2019-11-28 16:15:07.789 [main]DEBUG com.sandu.dao.TbProductDao.selectAll-<==      Total: 21
+2019-11-28 17:30:44.367 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:30:44.467 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 3(Integer)
+2019-11-28 17:30:44.487 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 3
+2019-11-28 17:31:06.894 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:31:07.044 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 13(Integer)
+2019-11-28 17:31:07.075 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 13
+2019-11-28 17:31:36.239 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:31:36.477 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 113(Integer)
+2019-11-28 17:31:36.730 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 21
+2019-11-28 17:35:57.563 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:35:57.632 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 113(Integer)
+2019-11-28 17:35:57.672 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 21
+2019-11-28 17:35:57.696 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==>  Preparing: SELECT count(1) FROM tb_product 
+2019-11-28 17:35:57.697 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==> Parameters: 
+2019-11-28 17:35:57.699 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-<==      Total: 1
+2019-11-28 17:36:20.718 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:36:20.797 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 113(Integer)
+2019-11-28 17:36:21.042 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 21
+2019-11-28 17:36:21.664 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==>  Preparing: SELECT count(1) FROM tb_product 
+2019-11-28 17:36:21.686 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==> Parameters: 
+2019-11-28 17:36:21.687 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-<==      Total: 1
+2019-11-28 17:36:45.752 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:36:45.855 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 21(Integer)
+2019-11-28 17:36:45.892 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 21
+2019-11-28 17:36:45.995 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==>  Preparing: SELECT count(1) FROM tb_product 
+2019-11-28 17:36:45.997 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==> Parameters: 
+2019-11-28 17:36:46.001 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-<==      Total: 1
+2019-11-28 17:37:11.842 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==>  Preparing: SELECT product_id, product_name, img_addr, normal_price, promotion_price, priority, create_time, last_edit_time, enable_status, product_category_id, shop_id FROM tb_product ORDER BY priority DESC LIMIT ?,?; 
+2019-11-28 17:37:11.962 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-==> Parameters: 0(Integer), 113(Integer)
+2019-11-28 17:37:12.080 [main]DEBUG com.sandu.dao.TbProductDao.queryProductList-<==      Total: 21
+2019-11-28 17:37:12.141 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==>  Preparing: SELECT count(1) FROM tb_product 
+2019-11-28 17:37:12.142 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-==> Parameters: 
+2019-11-28 17:37:12.143 [main]DEBUG com.sandu.dao.TbProductDao.queryProductCount-<==      Total: 1

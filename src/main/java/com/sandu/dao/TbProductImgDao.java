@@ -1,3 +1,4 @@
+
 package com.sandu.dao;
 
 import com.sandu.entity2.TbProductImg;
@@ -13,4 +14,10 @@ public interface TbProductImgDao {
     List<TbProductImg> selectAll();
 
     int updateByPrimaryKey(TbProductImg record);
+    
+    int batchInsertProductImg(List<TbProductImg> list);
+
+    int deleteProductImgByProductId(int productId);
+
+    List<TbProductImg> queryProductImgList(Integer productId);
 }

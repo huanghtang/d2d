@@ -1,6 +1,7 @@
 package com.sandu.entity2;
 
 import java.util.Date;
+import java.util.List;
 
 public class TbProduct {
     private Integer productId;
@@ -9,10 +10,9 @@ public class TbProduct {
 
     private Integer productCategoryId;
 
-    private Integer shopId;
 
     private String productDesc;
-
+    //简略图
     private String imgAddr;
 
     private String normalPrice;
@@ -24,10 +24,41 @@ public class TbProduct {
     private Date lastEditTime;
 
     private Integer priority;
-
+    //0.下架 1.在前端展示系统展示
     private Integer enableStatus;
 
-    public Integer getProductId() {
+    private TbProductCategory productCategory;
+    
+    private List<TbProductImg> productImgList;
+    
+    private TbShop shop;
+    
+    
+    public TbProductCategory getProductCategory() {
+		return productCategory;
+	}
+
+	public void setProductCategory(TbProductCategory productCategory) {
+		this.productCategory = productCategory;
+	}
+
+	public List<TbProductImg> getProductImgList() {
+		return productImgList;
+	}
+
+	public void setProductImgList(List<TbProductImg> productImgList) {
+		this.productImgList = productImgList;
+	}
+
+	public TbShop getShop() {
+		return shop;
+	}
+
+	public void setShop(TbShop shop) {
+		this.shop = shop;
+	}
+
+	public Integer getProductId() {
         return productId;
     }
 
@@ -51,13 +82,6 @@ public class TbProduct {
         this.productCategoryId = productCategoryId;
     }
 
-    public Integer getShopId() {
-        return shopId;
-    }
-
-    public void setShopId(Integer shopId) {
-        this.shopId = shopId;
-    }
 
     public String getProductDesc() {
         return productDesc;
@@ -122,4 +146,15 @@ public class TbProduct {
     public void setEnableStatus(Integer enableStatus) {
         this.enableStatus = enableStatus;
     }
+
+	@Override
+	public String toString() {
+		return "TbProduct [productId=" + productId + ", productName=" + productName + ", productCategoryId="
+				+ productCategoryId + ", productDesc=" + productDesc + ", imgAddr=" + imgAddr + ", normalPrice="
+				+ normalPrice + ", promotionPrice=" + promotionPrice + ", createTime=" + createTime + ", lastEditTime="
+				+ lastEditTime + ", priority=" + priority + ", enableStatus=" + enableStatus + ", productCategory="
+				+ productCategory + ", productImgList=" + productImgList + ", shop=" + shop + "]";
+	}
+    
+    
 }

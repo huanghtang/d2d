@@ -1,4 +1,14 @@
-2019-11-05 10:40:01.556 [main]ERROR com.sandu.util.ImageUtil-Can't read input file!
-2019-11-05 10:46:46.638 [main]ERROR com.sandu.util.ImageUtil-Can't read input file!
-2019-11-05 10:53:05.953 [main]ERROR com.sandu.util.ImageUtil-Can't read input file!
-2019-11-05 10:56:59.443 [main]ERROR com.sandu.util.ImageUtil-Can't read input file!
+2019-11-27 17:25:11.618 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:26:47.672 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:26:47.811 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:26:47.815 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:15.684 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:15.702 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:15.765 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:30.195 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:30.236 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:28:30.240 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空.jpg
+2019-11-27 17:29:21.064 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空123.jpg
+2019-11-27 17:29:21.072 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\星空123.jpg
+2019-11-27 17:46:21.371 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\111.jpg
+2019-11-27 17:46:21.447 [main]ERROR com.sandu.util.ImageUtil-Could not find file: C:\Users\sandu\Desktop\111 - 副本 (1).jpg

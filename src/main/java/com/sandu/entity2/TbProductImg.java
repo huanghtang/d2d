@@ -62,4 +62,12 @@ public class TbProductImg {
     public void setProductId(Integer productId) {
         this.productId = productId;
     }
+
+	@Override
+	public String toString() {
+		return "TbProductImg [productImgId=" + productImgId + ", imgAddr=" + imgAddr + ", imgDesc=" + imgDesc
+				+ ", priority=" + priority + ", createTime=" + createTime + ", productId=" + productId + "]";
+	}
+    
+    
 }

@@ -149,7 +149,7 @@ public class TbShop {
 
 	@Override
 	public String toString() {
-		return "TbShop [shopId=" + shopId + ", owner=" + owner.getUserId() + ", area=" + area.getAreaId() + ", shopCategory=" + shopCategory.getShopCategoryId()
+		return "TbShop [shopId=" + shopId + ", owner=" + owner + ", area=" + area + ", shopCategory=" + shopCategory
 				+ ", shopName=" + shopName + ", shopDesc=" + shopDesc + ", shopAddr=" + shopAddr + ", phone=" + phone
 				+ ", shopImg=" + shopImg + ", priority=" + priority + ", createTime=" + createTime + ", lastEditTime="
 				+ lastEditTime + ", enableStatus=" + enableStatus + ", advice=" + advice + "]";
